@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { MaterializeModule } from 'angular2-materialize';
 
 import { AppComponent } from './app.component';
+import { ContatosModules } from './contatos/contatos.module';
 
 
 @NgModule({
@@ -10,7 +12,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ContatosModules, 
+    MaterializeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
