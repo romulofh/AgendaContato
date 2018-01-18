@@ -1,0 +1,30 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h2>Contatos</h2>
+
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Deletar</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let c of contatos">
+                            <td>{{ c.nome }}</td>
+                            <td>{{ c.email }}</td>
+                            <td>{{ c.telefone }}</td>
+                            <td><button class="waves-effect waves-light btn button-custom red darken-4">Deletar</button></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
