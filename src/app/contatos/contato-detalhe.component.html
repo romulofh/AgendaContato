@@ -1,0 +1,41 @@
+<div class="container">
+    <h2>Salvar Contato</h2>
+    <form class="col s12" #contatoForm="ngForm">
+
+        <div class="input-field col s8">
+            <i class="material-icons prefix">account_circle</i>
+            <input type="text" placeholder="Nome" class="validate"
+                required
+                name="nome"
+                [(ngModel)]="contato.nome">
+            <label class="active" for="nome" data-error="O campo é obrigatório">Nome</label>
+        </div>
+        
+        <div class="input-field col s8">
+            <i class="material-icons prefix">email</i>
+            <input type="email" placeholder="email@exemplo.com" class="validate"
+                required
+                name="email"
+                [(ngModel)]="contato.email">
+            <label class="active" for="email" data-error="Insira email válido">Email</label>
+        </div>
+        
+        <div class="input-field col s8">
+            <i class="material-icons prefix">phone</i>
+            <input type="text" placeholder="Telefone" class="validate"
+                required
+                name="telefone"
+                [(ngModel)]="contato.telefone">
+            <label class="active" for="telefone" data-error="O campo é obrigatório">Telefone</label>
+        </div>
+
+        <button type="submit" class="btn waves-effect waves-light" [disabled]="!contatoForm.form.valid">
+            Salvar
+            <i class="material-icons right">send</i>
+        </button>
+        <a class="btn waves-effect waves-light" routerLink="/">Voltar</a>
+
+    </form>
+
+    
+</div>

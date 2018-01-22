@@ -4,12 +4,19 @@
             <div class="col s12">
                 <h2>Contatos</h2>
 
+                <div>
+                    <a href="#" class="waves-effect waves-light btn button-custom" routerLink="/contato/save">
+                        Novo
+                    </a>
+                </div>
+
                 <table class="striped">
                     <thead>
                         <tr>
                             <th>Nome</th>
                             <th>Email</th>
                             <th>Telefone</th>
+                            <th>Editar</th>
                             <th>Deletar</th>
                         </tr>
                     </thead>
@@ -19,7 +26,8 @@
                             <td>{{ c.nome }}</td>
                             <td>{{ c.email }}</td>
                             <td>{{ c.telefone }}</td>
-                            <td><button class="waves-effect waves-light btn button-custom red darken-4">Deletar</button></td>
+                            <td><button class="waves-effect waves-light btn" [routerLink]="['/contato/save', c.id]">Editar</button></td>
+                            <td><button class="waves-effect waves-light btn red darken-4">Deletar</button></td>
                         </tr>
                     </tbody>
 

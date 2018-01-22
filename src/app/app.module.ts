@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -14,7 +15,8 @@ import { ContatosModules } from './contatos/contatos.module';
   imports: [
     BrowserModule,
     ContatosModules, 
-    MaterializeModule
+    MaterializeModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,12 @@
-  <nav class="nav-custom">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo right" >Agenda Contato</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="sass.html">Home</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav class="nav grey darken-2">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo right" >Agenda Contato</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/contato/save">Novo</a></li>
+    </ul>
+  </div>
+</nav>
 
-<contatos-lista></contatos-lista>
+<router-outlet></router-outlet>
 
