@@ -28,20 +28,26 @@ export class ContatoDetalheComponent implements OnInit {
             
             if (id){
                 this.isNew = false;
-                this.contatoService.getContato(id).
-                then((contato: Contato) => {
-                    this.contato = contato;
-                });
+                this.contatoService.getContato(id)
+                    .then((contato: Contato) => {
+                        this.contato = contato;
+                    });
             }
         });
     }
 
     onSubmit(): void {
+        let promise;
+
         if(this.isNew){
             console.log("CADASTRANDO");
+            promise = this.contatoService.create(this.contato);
         } else {
             console.log("ALTERANDO");
+            promise = this.contatoService.update(this.contato);
         }
+
+        promise.then(contato => this.location.back());
     }
 
 }
