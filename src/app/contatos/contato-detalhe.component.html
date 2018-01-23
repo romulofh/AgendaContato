@@ -1,6 +1,6 @@
 <div class="container">
     <h2>Salvar Contato</h2>
-    <form class="col s12" #contatoForm="ngForm">
+    <form class="col s12" #contatoForm="ngForm" (ngSubmit)="onSubmit()">
 
         <div class="input-field col s8">
             <i class="material-icons prefix">account_circle</i>
