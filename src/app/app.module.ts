@@ -9,6 +9,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { ContatosModules } from './contatos/contatos.module';
 import { MemoryDataService } from './memory-data.service';
+import { DialogSerivce } from './dialog.service';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { MemoryDataService } from './memory-data.service';
     HttpModule,
     InMemoryWebApiModule.forRoot(MemoryDataService)
   ],
-  providers: [],
+  providers: [
+    DialogSerivce
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -47,4 +47,12 @@ export class ContatoService {
         .catch(this.handleError);
     }
 
+    delete(contato: Contato): Promise<Contato> {
+        const urlDelete = `${this.apiUrl}/${contato.id}`;
+        return this.http.delete(urlDelete, {headers: this.headers})
+        .toPromise()
+        .then(() => contato as Contato)
+        .catch(this.handleError);        
+    }
+
 }
