@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="grid-example col s12">
+            <h3>Busca</h3>
+                
+                <div class="input-field col s8">
+                    <label for="search">Busca</label>
+                    <input type="search" #searchBox
+                        (keyup)="search(searchBox.value)">
+                </div>
+    
+            
+            
+                <ul class="collection col s6">
+                    <li class="collection-item cursor-pointer" *ngFor="let c of contatos | async" (click)="detalhes(c)"> {{ c.nome }} </li>
+                </ul>               
+            
+            
+              
+        </div>
+    </div>
+</div>
